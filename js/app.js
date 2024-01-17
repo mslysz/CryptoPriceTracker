@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', updateDateTime);
 //functions that retrieve current cryptocurrency prices
 
 const getCryptoPrice = () => {
+  updateDateTime();
   const cryptoSymbols = ['bitcoin', 'ethereum'];
   const apiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${cryptoSymbols.join(
     ','
